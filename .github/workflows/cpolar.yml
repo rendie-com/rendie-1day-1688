@@ -39,16 +39,10 @@ jobs:
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
       
-    - name: 部署[sqlite3/shopee/商品/]目录
+    - name: 部署[sqlite3/1688/]目录
       uses: JamesIves/github-pages-deploy-action@v4
       with: 
           branch: main
-          folder: sqlite3/shopee/商品/
-          target-folder: sqlite3/shopee/商品/
-          
-    - name: 部署[sqlite3/shopee/营销中心/]目录
-      uses: JamesIves/github-pages-deploy-action@v4
-      with: 
-        branch: main
-        folder: sqlite3/shopee/营销中心/
-        target-folder: sqlite3/shopee/营销中心/       
+          folder: sqlite3/1688/
+          target-folder: sqlite3/1688/          
+   
