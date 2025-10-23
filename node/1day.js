@@ -44,7 +44,7 @@ import path from 'path';
     localStorage.setItem("access_token", oo.access_token);
     localStorage.setItem("username", "1day-1688");
     ///////////////////////////////////////////////////////////////////////
-    localStorage.setItem("menuList", '{"top1":2,"top2":{"1":{"name":"类目","template":"Shopee/类目/index.js","isbool":false,"id":1,"url":"/view/Default/admin/html/iframe.html?template=Shopee/类目/index.js"},"6":{"name":"定时任务","id":"6","isbool":true,"url":"http://localhost:3000/view/Default/admin/html/iframe.html?template=1688/定时任务/index.js&jsFile=02&return=%2Fview%2FDefault%2Fadmin%2Fhtml%2Fiframe.html%3Ftemplate%3D1688%2F%25E5%25AE%259A%25E6%2597%25B6%25E4%25BB%25BB%25E5%258A%25A1%2Findex.js"}}}');
+    localStorage.setItem("menuList", '{"top1":2,"top2":{"6":{"name":"定时任务","id":"6","isbool":true,"url":"http://localhost:3000/view/Default/admin/html/iframe.html?template=1688/定时任务/index.js&jsFile=02&return=%2Fview%2FDefault%2Fadmin%2Fhtml%2Fiframe.html%3Ftemplate%3D1688%2F%25E5%25AE%259A%25E6%2597%25B6%25E4%25BB%25BB%25E5%258A%25A1%2Findex.js"}}}');
   }, {
     refresh_token: process.env.NODE_SHOPEE_REFRESH_TOKEN,
     access_token: process.env.NODE_SHOPEE_ACCESS_TOKEN    
