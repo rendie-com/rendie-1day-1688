@@ -15,31 +15,31 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
   
-    # - name: 下载并运行rendie-nextjs       
-    #   run: |        
-    #       git clone https://github.com/rendie-com/rendie-nextjs -b main rendie-nextjs
-    #       cd ./rendie-nextjs/         
-    #       npm i
-    #       npm run dev & 
-    #   env:
-    #       NEXTJS_CONFIG_DEFAULT_DB: ${{ secrets.NEXTJS_CONFIG_DEFAULT_DB }}  
-    #       NEXTJS_CONFIG_PG01: ${{ secrets.NEXTJS_CONFIG_PG01 }}  
-    #       NEXTJS_CONFIG_PG02: ${{ secrets.NEXTJS_CONFIG_PG02 }}  
-    #       NEXTJS_CONFIG_SQLITE: ${{ secrets.NEXTJS_CONFIG_SQLITE }} 
+    - name: 下载并运行rendie-nextjs       
+      run: |        
+          git clone https://github.com/rendie-com/rendie-nextjs -b main rendie-nextjs
+          cd ./rendie-nextjs/         
+          npm i
+          npm run dev & 
+      env:
+          NEXTJS_CONFIG_DEFAULT_DB: ${{ secrets.NEXTJS_CONFIG_DEFAULT_DB }}  
+          NEXTJS_CONFIG_PG01: ${{ secrets.NEXTJS_CONFIG_PG01 }}  
+          NEXTJS_CONFIG_PG02: ${{ secrets.NEXTJS_CONFIG_PG02 }}  
+          NEXTJS_CONFIG_SQLITE: ${{ secrets.NEXTJS_CONFIG_SQLITE }} 
 
     - name: 运行 cpolar       
       run: |     
-        mv sqlite3/1688/  sqlite3/_1688/
-    #     unzip cpolar-stable-linux-amd64.zip       
-    #     chmod a+rwx ./cpolar
-    #     ./cpolar authtoken ${{ secrets.CPOLAR_AUTHTOKEN }}  
-    #     echo "已授权"
-    #     ./cpolar http 3000 &
+        # mv sqlite3/1688/  sqlite3/_1688/
+        unzip cpolar-stable-linux-amd64.zip       
+        chmod a+rwx ./cpolar
+        ./cpolar authtoken ${{ secrets.CPOLAR_AUTHTOKEN }}  
+        echo "已授权"
+        ./cpolar http 3000 &
            
          
-    # - name: SSH connection to Actions
-    #   uses: P3TERX/ssh2actions@v1.0.0
-    #   if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+    - name: SSH connection to Actions
+      uses: P3TERX/ssh2actions@v1.0.0
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
       
     - name: 部署[sqlite3/_1688/]目录
       uses: JamesIves/github-pages-deploy-action@v4
