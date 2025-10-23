@@ -58,8 +58,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with: 
             branch: main
-            folder: sqlite3/1688/
-            target-folder: sqlite3/1688/            
+            folder: sqlite3/_1688/
+            target-folder: sqlite3/_1688/
             
       - name: 部署[error/]目录
         uses: JamesIves/github-pages-deploy-action@v4
