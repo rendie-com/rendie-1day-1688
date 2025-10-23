@@ -45,6 +45,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with: 
           branch: main
-          folder: sqlite3/_1688/类目/
-          target-folder: sqlite3/_1688/类目/
+          folder: sqlite3/_1688/
+          target-folder: sqlite3/_1688/
    
