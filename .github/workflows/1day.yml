@@ -46,7 +46,7 @@ jobs:
           
       - name: 运行node       
         run: |
-          mkdir -p ./error/         
+          mkdir -p ./sqlite3/error/         
           cd ./node/
           npm i  
           node ./1hour.js          
@@ -54,19 +54,12 @@ jobs:
           NODE_SHOPEE_ACCESS_TOKEN: ${{ secrets.NODE_SHOPEE_ACCESS_TOKEN }}  
           NODE_SHOPEE_REFRESH_TOKEN: ${{ secrets.NODE_SHOPEE_REFRESH_TOKEN }}
           
-      - name: 部署[sqlite3/_1688/]目录
+      - name: 部署[sqlite3/]目录
         uses: JamesIves/github-pages-deploy-action@v4
         with: 
             branch: main
-            folder: sqlite3/_1688/
-            target-folder: sqlite3/_1688/
-            
-      - name: 部署[error/]目录
-        uses: JamesIves/github-pages-deploy-action@v4
-        with: 
-            branch: main
-            folder: error/
-            target-folder: error/
+            folder: sqlite3/
+            target-folder: sqlite3/
             
       - name: 删除运行记录
         uses: Mattraks/delete-workflow-runs@v2
