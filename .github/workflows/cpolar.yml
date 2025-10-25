@@ -27,14 +27,14 @@ jobs:
           NEXTJS_CONFIG_PG02: ${{ secrets.NEXTJS_CONFIG_PG02 }}  
           NEXTJS_CONFIG_SQLITE: ${{ secrets.NEXTJS_CONFIG_SQLITE }} 
 
-    - name: 运行 cpolar       
-      run: |     
-        # mv sqlite3/1688/  sqlite3/_1688/
-        unzip cpolar-stable-linux-amd64.zip       
-        chmod a+rwx ./cpolar
-        ./cpolar authtoken ${{ secrets.CPOLAR_AUTHTOKEN }}  
-        echo "已授权"
-        ./cpolar http 3000 &
+    # - name: 运行 cpolar       
+    #   run: |     
+    #     # mv sqlite3/1688/  sqlite3/_1688/
+    #     unzip cpolar-stable-linux-amd64.zip       
+    #     chmod a+rwx ./cpolar
+    #     ./cpolar authtoken ${{ secrets.CPOLAR_AUTHTOKEN }}  
+    #     echo "已授权"
+    #     ./cpolar http 3000 &
            
          
     - name: SSH connection to Actions
